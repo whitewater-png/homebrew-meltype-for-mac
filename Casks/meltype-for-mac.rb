@@ -1,6 +1,6 @@
 cask "meltype-for-mac" do
-  version "1.1.7"
-  sha256 "de12f9692fbd99da6337cefc368730d25b3d81372a4741aebfefa8dbffcaa7ba"
+  version "1.2.0"
+  sha256 "429f3ab685c39efa67acf5c4096aef50a98cb2eb083e23c2ae0781458097f40f"
 
   url "https://github.com/whitewater-png/Meltype-for-Mac/releases/download/v#{version}-mac/Meltype-mac-#{version}.zip"
   name "Meltype for Mac"
@@ -20,6 +20,7 @@ cask "meltype-for-mac" do
   end
 
   depends_on arch: :arm64
+  # 実際の最低 OS は 13.3 (llama.framework の minos)。cask は :ventura (13) 単位でしか書けないので、13.0〜13.2 は caveats で案内する。
   depends_on macos: :ventura
 
   input_method "Meltype-mac/Meltype.app"
@@ -64,6 +65,8 @@ cask "meltype-for-mac" do
   ]
 
   caveats <<~EOS
+    macOS 13.3 以降が必要です (13.0〜13.2 では Meltype が起動しません)。
+
     インストール後は、いったんログアウトしてログインし直してください (Homebrew の処理はサンドボックスの中で動くため、
     入力ソースの登録を済ませられません。ログアウトせずに使うには、次を実行してから入力メニューで Meltype を選びます)。
       "$HOME/Library/Input Methods/Meltype.app/Contents/MacOS/Meltype" --register
