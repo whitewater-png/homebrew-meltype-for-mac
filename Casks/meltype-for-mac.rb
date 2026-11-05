@@ -1,6 +1,6 @@
 cask "meltype-for-mac" do
-  version "1.2.6"
-  sha256 "aa7a30a870175ebf5158673ef5ba79cb78a1268fc8b40a6673d3916908688d5e"
+  version "1.2.7"
+  sha256 "82e5dec5d26da0eed83f1ee0edbf214db56244b74c1c518c8af75aa4c2762694"
 
   url "https://github.com/whitewater-png/Meltype-for-Mac/releases/download/v#{version}-mac/Meltype-mac-#{version}.zip"
   name "Meltype for Mac"
@@ -68,7 +68,7 @@ cask "meltype-for-mac" do
     macOS 13.3 以降が必要です (13.0〜13.2 では Meltype が起動しません)。
 
     インストール後は、いったんログアウトしてログインし直してください (Homebrew の処理はサンドボックスの中で動くため、
-    入力ソースの登録を済ませられません。ログアウトせずに使うには、次を実行してから入力メニューで Meltype を選びます)。
+    入力ソースの登録を済ませられません。ログアウトせずに使うには、次を実行してから入力メニューで Meltype for Mac を選びます)。
       "$HOME/Library/Input Methods/Meltype.app/Contents/MacOS/Meltype" --register
 
     署名は ad-hoc で、Apple の公証は受けていません。そのまま起動できるよう、入れるときに quarantine 属性を外しています
